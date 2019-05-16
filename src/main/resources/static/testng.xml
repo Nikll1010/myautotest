@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite>
-    <test>
-
+<suite name="Uritest">
+    <test name="Uritest">
+        <classes>
+            <class name="com.nikll.controller.UriTest">
+                <methods>
+                    <include name="mytest"/>
+                </methods>
+            </class>
+        </classes>
     </test>
 
 </suite>
