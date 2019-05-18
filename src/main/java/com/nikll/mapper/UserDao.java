@@ -8,6 +8,7 @@ package com.nikll.mapper;
 
 import com.nikll.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
@@ -19,5 +20,6 @@ import java.util.List;
 @Mapper
 public interface UserDao {
     int getTotal();
-    List<User> getUserlist(int start,int end);
+    User getUser(int id);
+    List<User> getUserlist(@Param("start") int start,@Param("end") int end);
 }
