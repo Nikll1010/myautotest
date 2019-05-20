@@ -6,10 +6,14 @@
  */
 package com.nikll.controller;
 
+import com.nikll.DemoApplication;
 import com.nikll.entity.User;
 import com.nikll.mapper.UserDao;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Component;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -20,7 +24,13 @@ import java.util.List;
  * @date 2019/5/15 22:30
 
  */
-public class UriTest {
+//@Component
+//@SpringBootTest(classes = {DemoApplication.class })
+@SpringBootTest
+public class UriTest extends AbstractTestNGSpringContextTests {
+    public UriTest(){
+        System.out.println("hahahaha");
+    }
     @Autowired
     private UserDao userDao;
     @Autowired
@@ -33,8 +43,8 @@ public class UriTest {
 
     @Test(groups = "mytest",description = "查询/getUserList接口正向case")
     public void getUserListTest(){
-        List<User> userList = sqlSession.selectList("getUserlist");
-        System.out.println(userList);
+//        List<User> userList = sqlSession.selectList("getUserlist");
+//        System.out.println(userList);
         int total = userDao.getTotal();
         System.out.println(userDao);
         System.out.println(total);

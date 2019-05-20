@@ -18,7 +18,7 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
  */
 @SpringBootApplication(exclude = MongoAutoConfiguration.class)
-@MapperScan(basePackages = "com.nikll.mapper.UserDao")
+@MapperScan(basePackages = "com.nikll.mapper")
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class,args);
