@@ -7,6 +7,9 @@
                     <include name="mytest"/>
                 </methods>
             </class>
+            <class name="com.nikll.controller.LoginTest">
+
+            </class>
         </classes>
     </test>
 

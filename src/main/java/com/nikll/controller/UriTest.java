@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Nikll
@@ -43,8 +45,11 @@ public class UriTest extends AbstractTestNGSpringContextTests {
 
     @Test(groups = "mytest",description = "查询/getUserList接口正向case")
     public void getUserListTest(){
-//        List<User> userList = sqlSession.selectList("getUserlist");
-//        System.out.println(userList);
+        Map map = new HashMap(2);
+        map.put("start",10);
+        map.put("end",20);
+        List<User> userList = sqlSession.selectList("getUserlist",map);
+        System.out.println(userList);
         int total = userDao.getTotal();
         System.out.println(userDao);
         System.out.println(total);

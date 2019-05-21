@@ -8,14 +8,16 @@ package com.nikll.utils;
 
 
 
+import lombok.Data;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
+
 
 
 /**
  * @author Nikll
  * @date 2019/5/15 22:33
  */
+@Data
 public class HttpClientUtil {
 
     public static CloseableHttpClient httpclient;
